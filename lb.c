@@ -478,7 +478,7 @@ static uint64_t get_cpu_busy_time()
     return utime + ntime + stime;
 }
 
-static char cpu_spin_accumulator;
+static volatile char cpu_spin_accumulator;
 
 static char squander_time(uint64_t iteration)
 {
